@@ -14,3 +14,10 @@ def register(request):
     else:
         form = registerForm()
     return render(request, 'Users/register.html',{'form': form})
+
+
+def login(render):
+    if request.method =='POST':
+        aba = 2
+    else:
+        return render(request, 'Users/login.html')
