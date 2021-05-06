@@ -8,4 +8,3 @@ class Group(models.Model):
     creator = models.ForeignKey(User, on_delete=models.RESTRICT, related_name='maker')
     prize = models.IntegerField(validators=[MaxValueValidator(1000)])
     about = models.TextField(blank=True)
-    
