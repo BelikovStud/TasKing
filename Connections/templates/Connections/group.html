@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>Hi</head>
+<body>
+    <h1>{{name}}</h1>
+    <h1>{{prize}}</h1>
+    {% for task in tasks %}
+        <h1>{{task.task.title}}</h1>
+    {% endfor %}
+
+    {% for par in par %}
+        <h1>{{par.user.username}}</h1>
+    {% endfor %}
+</body>
+</html>
