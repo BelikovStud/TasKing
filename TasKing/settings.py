@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Group.apps.GroupConfig',
     'Task.apps.TaskConfig',
+    'Connections.apps.ConnectionsConfig',
 ]
 
 MIDDLEWARE = [
