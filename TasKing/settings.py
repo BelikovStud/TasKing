@@ -39,11 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Group.apps.GroupConfig',
     'Task.apps.TaskConfig',
-<<<<<<< HEAD
     'Connections.apps.ConnectionsConfig',
-=======
     'Users.apps.UsersConfig',
->>>>>>> a6b4f8c (add profile model)
 ]
 
 MIDDLEWARE = [
