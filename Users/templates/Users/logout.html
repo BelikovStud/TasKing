@@ -17,10 +17,7 @@
 <body>
     <section class="login-dark">
         <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-        <form method="post">
-            {% csrf_token %}
-            {{form.as_p}}
-            <button class="btn btn-primary" type="submit">Lets Go!</button>
+            <a href="{% url 'home' %}"><button class="btn btn-primary" type="submit" style='position: relative; left:730px;'>OK!</button></a>
         </form>
     </section>
     <script src="{% static 'assets/js/jquery.min.js' %}"></script>
