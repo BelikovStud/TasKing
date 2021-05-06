@@ -82,7 +82,7 @@ def dsapprove(request, task_id):
     if grp.creator is not request.user:
         return redirect('home')
     else:
-        curr_task.disapprove()
+        curr_task.dis_approve()
         curr_task.save()
         name = grp.name
         prize = grp.prize
