@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -29,24 +30,14 @@
             <hr class="star-light">
         </div>
         <div class="card-group" style="color: var(--gray-dark);">
+            {% for grp in groups %}
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Group 1</h4>
-                    <p class="card-text">30 points</p><a class="btn btn-primary" role="button" href="index.html">enter</a>
+                    <h4 class="card-title">{{grp.group.name}}</h4>
+                    <p class="card-text">{{grp.group.prize}}</p><a class="btn btn-primary" role="button" href="/Connections/group/{{grp.group.id}}">enter</a>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Group 2</h4>
-                    <p class="card-text">40 points<br></p><a class="btn btn-primary" role="button" href="index.html">enter</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Group 3</h4>
-                    <p class="card-text">30 points<br></p><a class="btn btn-primary" role="button" href="index.html">enter</a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </header>
     <footer class="text-center footer">

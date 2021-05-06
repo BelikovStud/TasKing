@@ -11,12 +11,3 @@ class Profile(models.Model):
     def __str__(self):
         return f'{self.user.username} profile'
 
-    def is_user_in_group(self, grp):
-        if self.user != grp.creator:
-            qs = GroupUserConnection.get_all_users_of_group(grp)
-            for grp_user_connection in qs:
-                if grp_user_connection.user == self.user:
-                    return True
-            return False
-        else:
-            return True
