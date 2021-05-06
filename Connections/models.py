@@ -10,8 +10,16 @@ class GroupTaskConnection(models.Model):
     task = models.ForeignKey(Task, on_delete=models.RESTRICT, related_name='tsk')
     date_added = models.DateTimeField(default=timezone.now)
 
+    @classmethod
+    def get_all_tasks_of_group(cls, group):
+        return cls.objects.filter(group=group)
+
 
 class GroupUserConnection(models.Model):
     group = models.ForeignKey(Group, on_delete=models.RESTRICT, related_name='grpc')
     user = models.ForeignKey(User, on_delete=models.RESTRICT, related_name='usr')
     score = models.IntegerField(validators=[MaxValueValidator(1000)])
+
+    @classmethod
+    def get_all_groups_of_user(cls, user):
+        return cls.objects.filter(user=user)
