@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -5,27 +6,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'assets2/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'assets2/fonts/font-awesome.min.css' %}">
 </head>
 
 <body id="page-top">
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav">
-        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Brand</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">TASKING MARKETPLACE</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-0 mx-lg-1"></li>
                     <li class="nav-item mx-0 mx-lg-1"></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">HOME</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'home' %}">HOME</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <header class="text-center text-white bg-primary masthead">
-        <div class="container"><img class="img-fluid d-block mx-auto mb-5" src="assets/img/profile.png">
-            <h1>John Doe</h1>
+        <div class="container"><img class="img-fluid d-block mx-auto mb-5" src="{% static 'assets2/img/profile.png' %}">
+            <h1>Hello Guest</h1>
             <hr class="star-light">
             <h2 class="font-weight-light mb-0"></h2>
         </div>
@@ -42,7 +43,7 @@
 <h1>amazon gift card</h1>
 
 </div>
-                        </div><img class="img-fluid" src="assets/img/amazon-4x3.png">
+                        </div><img class="img-fluid" src="{% static 'assets2/img/amazon-4x3.png' %}">
                     </a></div>
                 <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" data-toggle="modal" href="#portfolio-modal-2">
                         <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
@@ -50,35 +51,37 @@
 <h1>150</h1>
 <h1>beauty products</h1>
 </div>
-                        </div><img class="img-fluid" src="assets/img/portfolio/laline.jpg">
+                        </div><img class="img-fluid" src="{% static 'assets2/img/portfolio/laline.jpg' %}">
                     </a></div>
                 <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" data-toggle="modal" href="#portfolio-modal-3">
                         <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
                             <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="coinscost"></i>
 <h1>120</h1>
 <h1>dumbbells</h1></div>
-                        </div><img class="img-fluid" src="assets/img/portfolio/dumbells.jpg">
+                        </div><img class="img-fluid" src="{% static 'assets2/img/portfolio/dumbells.jpg' %}">
                     </a></div>
                 <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" data-toggle="modal" href="#portfolio-modal-4">
                         <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
                             <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="coinscost"></i>
 <h1>130</h1>
 <h1>Headphones</h1></div>
-                        </div><img class="img-fluid" src="assets/img/portfolio/headphones.jpg">
+                        </div><img class="img-fluid" src="{% static 'assets2/img/portfolio/headphones.jpg' %}">
                     </a></div>
                 <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" data-toggle="modal" href="#portfolio-modal-5">
                         <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
                             <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="coinscost"></i>
 <h1>170</h1>
 <h1>kitchenware</h1></div>
-                        </div><img class="img-fluid" src="assets/img/portfolio/kitchenware.jpg">
+                        </div><img class="img-fluid" src="{% static 'assets2/img/portfolio/kitchenware.jpg' %}">
                     </a></div>
                 <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" data-toggle="modal" href="#portfolio-modal-6">
                         <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
                             <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="coinscost"></i>
-<h1>100</h1></div>
-                        </div><img class="img-fluid" src="assets/img/portfolio/salt.jpg">
+<h1>100</h1>
+<h1>Sugar cups</h1></div>
+                        </div><img class="img-fluid" src="{% static 'assets2/img/portfolio/salt.jpg' %}">
                     </a></div>
+                
             </div>
         </div>
     </section>
@@ -118,7 +121,7 @@
                         <div class="row">
                             <div class="col-lg-8 mx-auto">
                                 <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
-                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/cabin.png">
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="{% static 'assets2/img/portfolio/cabin.png' %}">
                                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                             </div>
                         </div>
@@ -137,7 +140,7 @@
                         <div class="row">
                             <div class="col-lg-8 mx-auto">
                                 <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
-                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/cake.png">
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="{% static 'assets2/img/portfolio/cake.png' %}">
                                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                             </div>
                         </div>
@@ -156,7 +159,7 @@
                         <div class="row">
                             <div class="col-lg-8 mx-auto">
                                 <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
-                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/circus.png">
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="{% static 'assets2/img/portfolio/circus.png' %}">
                                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                             </div>
                         </div>
@@ -175,7 +178,7 @@
                         <div class="row">
                             <div class="col-lg-8 mx-auto">
                                 <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
-                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/game.png">
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="{% static 'assets2/img/portfolio/game.png' %}">
                                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                             </div>
                         </div>
@@ -194,7 +197,7 @@
                         <div class="row">
                             <div class="col-lg-8 mx-auto">
                                 <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
-                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/safe.png">
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="{% static 'assets2/img/portfolio/safe.png' %}">
                                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                             </div>
                         </div>
@@ -213,7 +216,7 @@
                         <div class="row">
                             <div class="col-lg-8 mx-auto">
                                 <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
-                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/submarine.png">
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="{% static 'assets2/img/portfolio/submarine.png' %}">
                                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                             </div>
                         </div>
@@ -223,10 +226,10 @@
             </div>
         </div>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{% static 'assets2/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets2/bootstrap/js/bootstrap.min.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="assets/js/freelancer.js"></script>
+    <script src="{% static 'assets2/js/freelancer.js' %}"></script>
 </body>
 
 </html>
