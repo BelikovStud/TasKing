@@ -23,3 +23,7 @@ class GroupUserConnection(models.Model):
     @classmethod
     def get_all_groups_of_user(cls, user):
         return cls.objects.filter(user=user)
+
+    @classmethod
+    def get_all_users_of_group(cls, group):
+        return cls.objects.filter(group=group)
