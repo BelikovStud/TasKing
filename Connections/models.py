@@ -14,6 +14,9 @@ class GroupTaskConnection(models.Model):
     def get_all_tasks_of_group(cls, group):
         return cls.objects.filter(group=group)
 
+    def __str__(self):
+        return f'Group: {self.group}, Task: {self.task}'
+
 
 class GroupUserConnection(models.Model):
     group = models.ForeignKey(Group, on_delete=models.RESTRICT, related_name='grpc')
@@ -27,3 +30,6 @@ class GroupUserConnection(models.Model):
     @classmethod
     def get_all_users_of_group(cls, group):
         return cls.objects.filter(group=group)
+
+    def __str__(self):
+        return f'Group: {self.group}, user: {self.user}'
