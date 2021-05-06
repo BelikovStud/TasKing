@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Task.apps.TaskConfig',
     'Connections.apps.ConnectionsConfig',
     'Users.apps.UsersConfig',
+    'Main.apps.MainConfig',
 ]
 
 MIDDLEWARE = [
