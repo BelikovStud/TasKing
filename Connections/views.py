@@ -50,3 +50,47 @@ def assign(request, task_id):
             'tasks':tasks,
             'par':participents
             })
+
+
+def approve(request, task_id):
+    curr_task = Task.objects.filter(id=task_id).first()
+    if not curr_task:
+        return redirect('home')
+    grp = GroupTaskConnection.objects.filter(task=curr_task).first().group
+    if grp.creator is not request.user:
+        return redirect('home')
+    else:
+        curr_task.approve()
+        curr_task.save()
+        name = grp.name
+        prize = grp.prize
+        tasks = GroupTaskConnection.get_all_tasks_of_group(grp)
+        participents = GroupUserConnection.get_all_users_of_group(grp)
+        return render(request, 'Connections/group.html', {
+            'name':name, 
+            'prize':prize,
+            'tasks':tasks,
+            'par':participents
+            })
+
+
+def dsapprove(request, task_id):
+    curr_task = Task.objects.filter(id=task_id).first()
+    if not curr_task:
+        return redirect('home')
+    grp = GroupTaskConnection.objects.filter(task=curr_task).first().group
+    if grp.creator is not request.user:
+        return redirect('home')
+    else:
+        curr_task.disapprove()
+        curr_task.save()
+        name = grp.name
+        prize = grp.prize
+        tasks = GroupTaskConnection.get_all_tasks_of_group(grp)
+        participents = GroupUserConnection.get_all_users_of_group(grp)
+        return render(request, 'Connections/group.html', {
+            'name':name, 
+            'prize':prize,
+            'tasks':tasks,
+            'par':participents
+            })
