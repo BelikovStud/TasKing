@@ -24,6 +24,12 @@
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">our team</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About tasking</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact us</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">My Groups</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'logout' %}">Log Out</a></li>
+                    {% else %}
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'login' %}">Login!</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -34,6 +40,7 @@
             <hr class="star-light">
             <h2 class="font-weight-light mb-0">Who want's to be the "TASKING"?</h2>
         </div>
+    {% if not user.is_authenticated %}
     </header>
     <section id="portfolio" class="portfolio">
         <div class="container">
@@ -236,6 +243,7 @@
             </div>
         </div>
     </div>
+    {% endif %}
     <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-6">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
